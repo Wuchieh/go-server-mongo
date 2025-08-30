@@ -3,11 +3,11 @@ package mongo
 import "fmt"
 
 type Config struct {
-	Host     string
-	Port     int
-	Database string
-	Username string
-	Password string
+	Host     string `mapstructure:"host"`
+	Port     int    `mapstructure:"port"`
+	Database string `mapstructure:"database"`
+	Username string `mapstructure:"username"`
+	Password string `mapstructure:"password"`
 }
 
 func (c Config) getUri() string {
