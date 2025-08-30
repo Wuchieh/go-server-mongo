@@ -13,3 +13,13 @@ type Config struct {
 func (c Config) getUri() string {
 	return fmt.Sprintf("mongodb://%s:%d", c.Host, c.Port)
 }
+
+func GetDefaultConfig() Config {
+	return Config{
+		Host:     "localhost",
+		Port:     27017,
+		Database: "database",
+		Username: "username",
+		Password: "password",
+	}
+}
